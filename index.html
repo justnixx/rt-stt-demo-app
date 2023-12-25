@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/main.js"></script>
+    <title>Real-time Speech to Text App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Real-time Stt App</h1>
+
+      <div class="btn-wrapper">
+        <button id="startBtn" class="btn-start">
+          <svg viewBox="0 0 100 100" class="hidden">
+            <!-- Outer circle -->
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              stroke="#ccc"
+              stroke-width="5"
+              fill="none"
+            />
+
+            <!-- Inner circle indicating recording -->
+            <circle
+              cx="50"
+              cy="50"
+              r="30"
+              stroke="#ccc"
+              stroke-width="5"
+              fill="none"
+            >
+              <animate
+                attributeName="r"
+                values="30; 25; 30"
+                dur="1.5s"
+                repeatCount="indefinite"
+              />
+            </circle>
+
+            <!-- Record icon in the center -->
+            <circle cx="50" cy="50" r="5" fill="#ccc" />
+          </svg>
+
+          <span> Start Recording </span>
+        </button>
+        <button id="stopBtn" class="btn-stop" disabled>Stop Recording</button>
+      </div>
+
+      <div id="result" class="result"></div>
+    </div>
+  </body>
+</html>
